@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -155,6 +157,7 @@ public class MapHelper implements LocationSource,
                 if (isMoveToCenter) {
                     //定位后添加附近的车辆  每次重新定位就会重新添加
                     getBikes(aMapLocation);
+//                    getBikess(aMapLocation);
                     aMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
                 }
                 isMoveToCenter = false;
@@ -276,54 +279,39 @@ public class MapHelper implements LocationSource,
 
             @Override
             public void onSuccess(NetEntity entity) {
+                List<BikeInfo> list_bikeInfo = entity.toList(BikeInfo.class);
                 for (Marker marker : markers) {
                     marker.remove();
                 }
-                List<BikeInfo> list_bikeInfo = entity.toList(BikeInfo.class);
+                Message message = new Message();
+                message.what=101;
+                handler.sendMessage(message);
+
                 if (list_bikeInfo != null && list_bikeInfo.size() > 0) {
                     for (BikeInfo info : list_bikeInfo) {
-                        addMarker(aMapLocation.getLatitude() + Double.valueOf(info.getLat()), aMapLocation.getLongitude() + Double.valueOf(info.getLng()));
+                        addMarker(Double.valueOf(info.getLat()), Double.valueOf(info.getLng()));
                     }
                 }
 
             }
         });
 
-//
-//        Map<String, String> params = new HashMap<>();
-//        params.put("lat", String.valueOf(aMapLocation.getLatitude()));
-//        params.put("lng", String.valueOf(aMapLocation.getLongitude()));
-//
-//        params.put("range", String.valueOf(10));
-//        MyHttpUtils.getWithHeader(C.Urls.bikes, params, new HttpResponse() {
-//            @Override
-//            public void onGetData(String data) {
-//
-//                for (Marker marker : markers) {
-//                    marker.remove();
-//                }
-//                try {
-//                    JSONObject object = new JSONObject(data);
-//                    String bikesJsonArr = object.optString("data");
-//                    List<BikeInfo> bikeInfoList = CommUtil.getBeanList(bikesJsonArr, "list", BikeInfo.class);
-//                    if (bikeInfoList != null && bikeInfoList.size() > 0) {
-//                        for (BikeInfo info : bikeInfoList) {
-//                            addMarker(aMapLocation.getLatitude() + info.getLat(), aMapLocation.getLongitude() + info.getLng());
-//                        }
-//                    }
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//
-//            @Override
-//            public void onError(String error) {
-//                // super.onError(error);
-//            }
-//        });
 
     }
 
+
+
+
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 101:
+                    Log.i("____****","lng______");
+                    break;
+            }
+        }
+    };
 
     public void removeOfflineMap(String city) {
         if (amapManager != null)
