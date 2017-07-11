@@ -32,6 +32,7 @@ public class GuardActivity extends BaseActivity {
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         datas.add(imageView);
 
+        
         imageView = new ImageView(mContext);
         imageView.setImageResource(R.mipmap.page2);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
