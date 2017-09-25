@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.qianying.bbdc.GuardActivity">
+    tools:context="com.qianying.bike.GuardActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/guard_vp"

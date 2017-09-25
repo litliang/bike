@@ -41,7 +41,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="19dp"
-            android:text="0.01"
+            android:text="99.00"
             android:textColor="@color/content"
             android:textSize="30dp"/>
 
@@ -166,7 +166,7 @@
             android:layout_above="@+id/txt_charge"
             android:layout_marginLeft="22dp"
             android:layout_marginRight="14dp"
-            android:text="全国百万百宝任你骑"
+            android:text="全国百万小樱任你骑"
             android:textColor="#666666"
             android:textSize="13dp"/>
     </LinearLayout>
@@ -229,7 +229,7 @@
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="14dp"
         android:layout_marginRight="14dp"
-        android:background="@color/orange"
+        android:background="@color/colorAccent"
         android:gravity="center"
         android:text="@string/charge"
         android:textColor="@color/white"

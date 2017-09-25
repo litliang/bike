@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.qianying.bbdc.search.CommonAddressActivity">
+    tools:context="com.qianying.bike.search.CommonAddressActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

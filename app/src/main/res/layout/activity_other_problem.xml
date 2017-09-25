@@ -42,7 +42,7 @@
         android:drawablePadding="10dp"
         android:gravity="center_vertical"
         android:padding="10dp"
-        android:text="如果车辆蓝灯亮起，代表这个车辆已经被预约，请换其他百宝单车使用"
+        android:text="如果车辆蓝灯亮起，代表这个车辆已经被预约，请换其他小樱单车使用"
         android:textColor="@color/text"
         android:textSize="10dp" />
 
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:padding="10dp"
-        android:text="如果车辆蓝灯亮起，代表这个车辆已经被预约，请换其他百宝单车使用"
+        android:text="如果车辆蓝灯亮起，代表这个车辆已经被预约，请换其他小樱单车使用"
         android:textColor="@color/text"
         android:textSize="10dp" />
 

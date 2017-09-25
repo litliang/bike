@@ -2,8 +2,8 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#fe9344</color>
-
+    <color name="colorAccent">#58b929</color>
+    <color name="green">#00ff00</color>
     <color name="line_color_grey">#cccccc</color>
     <color name="white">#ffffff</color>
 
@@ -12,7 +12,7 @@
     <color name="gary_bg">#F2F2F2</color>
     <color name="gray">#F5F5F5</color>
     <color name="text">#999999</color>
-    <color name="orange">#FE9344</color>
+    <color name="orange">#58b929</color>
     <color name="blue">#4493FE</color>
     <color name="content">#333333</color>
     <color name="btn_bg">#eeeeee</color>

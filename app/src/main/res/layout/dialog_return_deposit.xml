@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:layout_marginTop="28dp"
-            android:text="押金会立即退会，退款后，您讲不能使用百宝共享单车，确定要进行此退款吗？"
+            android:text="押金会立即退回，退款后，您将不能使用小樱共享单车，确定要进行此退款吗？"
             android:textColor="@color/content"
             android:textSize="12dp"/>
 

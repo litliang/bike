@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.qianying.bbdc">
+    package="com.qianying.bike">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- Required -->
     <permission
-        android:name="com.qianying.bbdc.permission.JPUSH_MESSAGE"
+        android:name="com.qianying.bike.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
     <!--阿里支付权限声明-->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -50,7 +50,7 @@
         <!-- 高德key ： 5efd8ede6e441a883d7bffe86fbb7407 -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="92809a651f646864013d58ae20afd9bf" />
+            android:value="c2ba195bff8bf1bd2c7cbfd8a56fe2dc" />
 
         <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
         <service android:name="com.amap.api.location.APSService" />

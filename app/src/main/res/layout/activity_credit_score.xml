@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.qianying.bbdc.slidingMenu.mineSecond.CreditScoreActivity">
+    tools:context="com.qianying.bike.slidingMenu.mineSecond.CreditScoreActivity">
 
 
-    <com.qianying.bbdc.widget.CustomTitlebar
+    <com.qianying.bike.widget.CustomTitlebar
         android:id="@+id/titlebar"
         android:layout_width="match_parent"
         android:layout_height="44dp"
@@ -26,7 +26,7 @@
             android:gravity="center"
             android:layout_height="180dp">
 
-            <com.qianying.bbdc.widget.fitchart.FitChart
+            <com.qianying.bike.widget.fitchart.FitChart
                 android:id="@+id/fitChart"
                 android:layout_width="160dp"
                 android:layout_height="160dp"

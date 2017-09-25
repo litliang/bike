@@ -23,25 +23,25 @@
         android:layout_height="100dp"
         android:background="@color/white">
 
-        <com.qianying.bbdc.widget.StatusViewCopy
+        <com.qianying.bike.widget.StatusViewCopy
             android:id="@+id/status_tel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
 
-        <com.qianying.bbdc.widget.StatusViewCopy
+        <com.qianying.bike.widget.StatusViewCopy
             android:id="@+id/status_deposit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
 
-        <com.qianying.bbdc.widget.StatusViewCopy
+        <com.qianying.bike.widget.StatusViewCopy
             android:id="@+id/status_certification"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
 
-        <com.qianying.bbdc.widget.StatusViewCopy
+        <com.qianying.bike.widget.StatusViewCopy
             android:id="@+id/status_complete"
             android:layout_width="0dp"
             android:layout_height="match_parent"

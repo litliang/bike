@@ -6,7 +6,7 @@
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
                 android:orientation="vertical"
-                tools:context="com.qianying.bbdc.MainActivity">
+                tools:context="com.qianying.bike.MainActivity">
 
 
     <RelativeLayout
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="百宝单车"
+            android:text="@string/app_name"
             android:textColor="@color/white"
             android:textSize="17dp"
             android:textStyle="bold"/>
@@ -76,7 +76,7 @@
             android:layout_marginBottom="30dp"
             android:background="@mipmap/home_ic_sm"
             android:gravity="center"
-            android:text="扫码开锁"
+            android:text=""
             android:textColor="#ffffff"/>
 
         <ImageView
@@ -97,11 +97,13 @@
             android:layout_marginLeft="20dp">
 
             <ImageView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/yuanicon"/>
 
             <ImageView
+                android:visibility="gone"
                 android:id="@+id/loading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
