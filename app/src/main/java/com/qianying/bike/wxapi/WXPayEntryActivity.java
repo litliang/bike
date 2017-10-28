@@ -406,7 +406,8 @@ public class WXPayEntryActivity extends BaseActivity implements IWXAPIEventHandl
             json.put("state",state);
             json.put("access_token",access_token);
             json.put("action","getAlipayOrder");
-            json.put("total","99.00");
+//            json.put("total","99.00");
+            json.put("total","0.01");
             json.put("type","1");
         } catch (JSONException e) {
             e.printStackTrace();
