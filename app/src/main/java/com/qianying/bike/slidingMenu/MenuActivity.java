@@ -101,6 +101,7 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
 //            }
 //        });
 
+
         statusTel = (StatusViewCopy) findViewById(R.id.status_tel);
         statusDeposit = (StatusViewCopy) findViewById(R.id.status_deposit);
         statusCertification = (StatusViewCopy) findViewById(R.id.status_certification);
@@ -117,6 +118,8 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
         statusCertification.setStatus(StatusViewCopy.NEXT);
         statusCertification.setTextColor(R.color.text);
         statusComplete.setText("注册完成");
+
+
         statusComplete.setStatus(StatusViewCopy.NEXT);
         statusComplete.setTextColor(R.color.text);
         statusComplete.setDivider(true);

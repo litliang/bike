@@ -28,7 +28,8 @@ android {
             signingConfig signingConfigs.myConfig
             debuggable true
             ndk {
-                abiFilters 'armeabi-v7a',"armeabi",'arm64-v8a', 'x86', 'x86_64'
+                abiFilters 'armeabi-v7a'
+//                ,"armeabi",'arm64-v8a', 'x86', 'x86_64'
 // 'armeabi-v7a',armeabi' 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
             }
         }
@@ -39,7 +40,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.myConfig
             ndk {
-                abiFilters 'armeabi-v7a',"armeabi",'arm64-v8a', 'x86', 'x86_64'
+                abiFilters 'armeabi-v7a'
+
+//                        ,"armeabi",'arm64-v8a', 'x86', 'x86_64'
 // 'armeabi-v7a',armeabi' 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
             }
         }
