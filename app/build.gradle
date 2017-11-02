@@ -90,9 +90,10 @@ dependencies {
     //    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.0'
     compile 'com.facebook.fresco:fresco:0.12.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
-//    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
-//    compile 'com.google.code.gson:gson:2.8.0'
+    //    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    //    compile 'com.google.code.gson:gson:2.8.0'
     compile project(':volley')
     compile project(':pulltorefreshlib')
     compile files('libs/AMap3DMap_5.2.0_AMapSearch_5.1.0_AMapLocation_3.4.0_20170602.jar')
+    compile project(':omniLockBTTest')
 }

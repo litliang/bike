@@ -1,13 +1,12 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 23
     buildToolsVersion "25.0.0"
 
     defaultConfig {
-        applicationId "com.example.omnilockbttest"
-        minSdkVersion 23
-        targetSdkVersion 25
+        minSdkVersion 14
+        targetSdkVersion 23
     }
 
     buildTypes {
