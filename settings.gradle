@@ -1,2 +1,5 @@
 include ':app', ':lib-zxing', ':volley', ':pulltorefreshlib'
-include ':omniLockBTTest'
+//include ':omniLockBTTest'
+//include ':omniLockBTTest'
+include ':omniLockBTTest1'
+include ':omniLockBTTest12'

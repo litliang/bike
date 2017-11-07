@@ -31,7 +31,8 @@ import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
-import com.qianying.bike.base.BaseActivity;
+
+import com.omnilockbt.bt.BLEService;
 import com.qianying.bike.comm.H;
 import com.qianying.bike.customer.CustomerHelper;
 import com.qianying.bike.map.MapHelper;
@@ -62,7 +63,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener, AMap.OnMarkerClickListener, AMap.OnMapClickListener {
+public class MainActivity extends BluActivity implements View.OnClickListener, AMap.OnMarkerClickListener, AMap.OnMapClickListener {
 
 
     private static final int REQUEST_CODE = 101;
@@ -92,6 +93,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     private UsersInfo usersInfo;
     public static String TAG = MainActivity.class.getName();
     private String phone;
+    private MainActivity mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -361,13 +364,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 }
                 if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
                     String result = bundle.getString(CodeUtils.RESULT_STRING);
-                    Toast.makeText(this, "车子编号为：" + result, Toast.LENGTH_LONG).show();
-                    Message msg = new Message();
-                    msg.what=11;
-                    msg.obj =result;
+                    Toast.makeText(this,""+result,Toast.LENGTH_SHORT).show();
+                    scan(result);
 
-                    //处理扫描结果（在界面上显示）
-                    mHandler.sendMessage(msg);
+//                    Toast.makeText(this, "车子编号为：" + result, Toast.LENGTH_LONG).show();
+//                    Message msg = new Message();
+//                    msg.what=11;
+//                    msg.obj =result;
+//
+//                    //处理扫描结果（在界面上显示）
+//                    mHandler.sendMessage(msg);
 
                 } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
                     Toast.makeText(MainActivity.this, "解析二维码失败", Toast.LENGTH_LONG).show();
@@ -380,12 +386,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         }
     }
 
-/**
+    private void sleep(long clip) {
+        try {
+            Thread.sleep(clip);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
  * 二维码扫描Activity
  * */
     private void goToCaptureActivity() {
-        Intent intent1 = new Intent(MainActivity.this, CaptureActivity.class);
-        startActivityForResult(intent1, REQUEST_CODE);
+        scan(bleDeviceMac);
+//        Intent intent1 = new Intent(MainActivity.this, CaptureActivity.class);
+//        startActivityForResult(intent1, REQUEST_CODE);
     }
 
     //申请相机权限后的返回码

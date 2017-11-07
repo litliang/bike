@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.qianying.bike">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -162,6 +165,8 @@
         <activity
             android:name=".GuardActivity"
             android:screenOrientation="portrait" />
+
+
         <!-- Required SDK核心功能 -->
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
@@ -305,6 +310,8 @@
         </activity>
 
 
+        <service android:name="com.omnilockbt.bt.BLEService" >
+        </service>
     </application>
 
 </manifest>
